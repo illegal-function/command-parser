@@ -37,7 +37,8 @@ module.exports = command => {
 
     if (command[0] === ':') {
       command.shift()
-    } else {
+    }
+    else {
       result.params[pname] = true
       continue
     }
@@ -45,7 +46,8 @@ module.exports = command => {
     if (command[0] === '{') {
       // don't shift
       result.params[pname] = module.exports(command)
-    } else {
+    }
+    else {
       result.params[pname] = command.shift()
     }
   }
